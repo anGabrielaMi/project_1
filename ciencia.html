@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Reseñas de Ciencia</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap y fuente -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body style="background-color: #f5f5f5;">
+    <nav class="navbar navbar-light bg-light mb-4">
+        <div class="container">
+            <a class="navbar-brand" href="index.html" style="font-family: 'Special Elite', monospace;">
+                ← Volver al inicio
+            </a>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="text-center py-4">
+        <h1 style="font-family: 'Special Elite', monospace; color: #4b1d6f;">Reseñas de libros de Ciencia</h1>
+    </header>
+
+    <!-- Reseñas existentes -->
+    <section class="container mb-5">
+        <h3 class="mb-4" style="font-family: 'Special Elite', monospace;">Reseñas destacadas</h3>
+
+
+        <div class="row" id="contenedor-reseñas">
+
+            <!-- Más reseñas aquí -->
+        </div>
+    </section>
+
+   <!-- Formulario para nueva reseña -->
+    <section class="container mb-5">
+        <h3 class="mb-4" style="font-family: 'Special Elite', monospace;">Escribe tu reseña</h3>
+
+        <!-- Mensaje para usuarios no logueados -->
+        <p id="mensaje-login" class="alert alert-warning text-center" style="font-family: 'Special Elite', monospace;">
+            Debes iniciar sesión para publicar una reseña.
+        </p>
+
+
+        <form id="form-reseña" class="solo-logueado">
+            <div class="mb-3">
+                <label for="titulo" class="form-label">Título del libro</label>
+                <input type="text" id="titulo" class="form-control" required disabled>
+            </div>
+
+            <div class="mb-3">
+                <label for="comentario" class="form-label">Tu reseña</label>
+                <textarea id="comentario" class="form-control" rows="4" required disabled></textarea>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Puntuación</label>
+                <select id="estrellas" class="form-select" disabled>
+                    <option value="5">★★★★★</option>
+                    <option value="4">★★★★☆</option>
+                    <option value="3">★★★☆☆</option>
+                    <option value="2">★★☆☆☆</option>
+                    <option value="1">★☆☆☆☆</option>
+                </select>
+            </div>
+
+            <button type="submit" class="btn btn-ficciona" disabled>Publicar reseña</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center text-white py-4"
+        style="background: linear-gradient(to right, #2c2f73, #4b1d6f); margin-top: 60px;">
+        <div class="container">
+            <p id="footer-texto" style="font-family: 'Special Elite', monospace; font-size: 0.8rem;">© 2025 Ficciona.
+                Todos los derechos reservados.</p>
+            <p>
+                <a href="mailto:contacto@ficciona.com" class="text-white text-decoration-none">Contacto</a> |
+                <a href="privacidad.html" id="link-privacidad" class="text-white text-decoration-none"
+                    style="font-size: 0.75rem;">Política de privacidad</a>
+            </p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
